@@ -13,34 +13,34 @@ export default function NavBar() {
        
      <NavContent>
        
-        <NaveItems>
+        <NaveItems >
             <NavLinks  className={({isActive})=>isActive ? "active" : ""} to="/">Summary</NavLinks>
-            <NavImage>
+            <NavImage to="/">
                 <Img src={require("../../../assets/Book.svg").default}/>
             </NavImage>
         </NaveItems>
         <NaveItems>
             <NavLinks  className={({isActive})=>isActive ? "active" : ""} to="/products">Products</NavLinks>
-            <NavImage>
+            <NavImage to="products">
                 <Img src={require("../../../assets/slide.svg").default}/>
             </NavImage>
         </NaveItems>
         <NaveItems>
             <NavLinks  className={({isActive})=>isActive ? "active" : ""} to="/hotselling">Hot Selling</NavLinks>
-            <NavImage>
+            <NavImage to="hotselling">
                 <Img src={require("../../../assets/fire.svg").default}/>
             </NavImage>
         </NaveItems>
         <NaveItems>
             <NavLinks  className={({isActive})=>isActive ? "active" : ""} to="/manageorder">Manage Order</NavLinks>
-            <NavImage>
+            <NavImage to="manageorder">
             <Img src={require("../../../assets/oder.svg").default}/>
 
             </NavImage>
         </NaveItems>
         <NaveItems>
             <NavLinks  className={({isActive})=>isActive ? "active" : ""} to="/payments">Payments</NavLinks>
-            <NavImage>
+            <NavImage to="payments">
             <Img src={require("../../../assets/Wallet.svg").default}/>
 
             </NavImage>
@@ -48,8 +48,8 @@ export default function NavBar() {
         </NaveItems>
         <NaveItems>
             <NavLinks  className={({isActive})=>isActive ? "active" : ""} to="/settings">Settings</NavLinks>
-            <NavImage>
-            <Img src={require("../../../assets/Settings.svg").default}/>
+            <NavImage  to="settings">
+            <Img src={require("../../../assets/Settings.svg").default} />
 
             </NavImage>
         </NaveItems>
