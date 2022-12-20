@@ -54,22 +54,24 @@ export default function NavBar() {
             </NavImage>
         </NaveItems>
      </NavContent>
-     <NavBottom>
-        <NavBottomImage>
-            <BottomImg src={require("../../../assets/Group 11.svg").default}/>
-                           
-        </NavBottomImage>
-        <Content>
-            Power up your Business
-         </Content> 
-         <GoBtn>
-            Go Pro!
-       
-                <BtnImg src={require("../../../assets/Settings-1.svg").default}/>
-      
-         </GoBtn>
-    
-     </NavBottom>
+           <NavBottom>
+                    <NavBottomItems>
+                        <NavBottomImage>
+                            <BottomImg src={require("../../../assets/Group 11.svg").default}/>
+                                        
+                        </NavBottomImage>
+                        <Content>
+                            Power up your Business
+                        </Content> 
+             
+                        <ButtonContainer>
+                            <SideHeading>Go Pro</SideHeading>
+                            <ImageContainer>
+                                <Buttonimge src={require("../../../assets/Settings-1.svg").default}/>
+                            </ImageContainer>
+                        </ButtonContainer>
+                    </NavBottomItems>
+            </NavBottom>
     </NavContainer>
 
 
@@ -145,26 +147,73 @@ display: block;
 const Img=styled.img`
 display: block;
 width:100%;
-
-
 `;
 
 const NavBottom=styled.div`
-   height: 30%;
-   width: 80%
+  
+
+
+   background-color:#D3D3D3;
+   padding: 40px;
+   width: 50%;
+   
+  
+  
+
+
+`;
+const NavBottomItems=styled.div`
+ width: 90%;
+ margin:0 auto;
+
+
 `;
 const NavBottomImage=styled.div`
-padding: 30px;
+w
+   
 `;
-const BottomImg=styled.img``;
+const BottomImg=styled.img`
+display: block;
+width:100%;
+`;
 const Content=styled.div`
-padding: 30px;
+text-align:center; 
+font-weight:bold;
+font-size:18px;
+margin-bottom: 30px;
 `;
-const GoBtn=styled(Link)`
-padding: 30px;
+
+
+
+
+
+
+
+
+const ButtonContainer = styled.button`
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    padding: 3px 40px;
+    background-color: #333988;
+    border-radius: 15px;
+    border: none;
+    margin: 0 auto;
 `;
-// const BtnImg=styled.span``;
-const BtnImg=styled.img``;
+const SideHeading = styled.p`
+    margin-right: 5px;
+    color: #fff;
+    font-weight: bold;
+`;
+const ImageContainer = styled.div`
+    width: 20%;
+    filter: invert(100%);
+    transform: rotate(-90deg);
+`;
+const Buttonimge = styled.img`
+    width: 100%;
+    display: block;
+`;
 
 
 
