@@ -65,7 +65,7 @@ export default function NavBar() {
                         </Content> 
              
                         <ButtonContainer>
-                            <SideHeading>Go Pro</SideHeading>
+                            <SideHeading>Go Pro!</SideHeading>
                             <ImageContainer>
                                 <Buttonimge src={require("../../../assets/Settings-1.svg").default}/>
                             </ImageContainer>
@@ -102,7 +102,7 @@ display:block;
 
 
 const NavContent=styled.ul`
-padding: 0px;
+padding: 40px 0px;
 
 
 `;
@@ -123,7 +123,8 @@ font-size: 18px;
 color:#5A5A5A;
 font-family:"Poppins-SemiBold";
 &:hover {
-    color:#333988;
+   color:#333988;
+   
 }
 
 
@@ -131,15 +132,13 @@ font-family:"Poppins-SemiBold";
 `;
 const NavImage=styled(Link)`
 
+
 &:hover {
    
-
-    // background-color: ;
-    border-radius:50%                                                                        /
-    border:1px solid #D3D3D3; 
+             
+    border-radius:50%; 
     background-color: #D3D3D3;
-    transform: scale(1.5);
-  
+
  }
  
 display: block;
@@ -147,15 +146,19 @@ display: block;
 const Img=styled.img`
 display: block;
 width:100%;
+
 `;
 
 const NavBottom=styled.div`
   
 
-
-   background-color:#D3D3D3;
+   margin-top:90px;
+   background-color:#E6F4FF;
    padding: 40px;
-   width: 50%;
+   width: 55%;
+   border-radius:20px ;
+   margin-bottom:30px;
+
    
   
   
@@ -169,7 +172,7 @@ const NavBottomItems=styled.div`
 
 `;
 const NavBottomImage=styled.div`
-w
+
    
 `;
 const BottomImg=styled.img`
@@ -178,7 +181,7 @@ width:100%;
 `;
 const Content=styled.div`
 text-align:center; 
-font-weight:bold;
+font-family:"Poppins-Bold";
 font-size:18px;
 margin-bottom: 30px;
 `;
@@ -199,6 +202,7 @@ const ButtonContainer = styled.button`
     border-radius: 15px;
     border: none;
     margin: 0 auto;
+    cursor: pointer;
 `;
 const SideHeading = styled.p`
     margin-right: 5px;
@@ -209,6 +213,7 @@ const ImageContainer = styled.div`
     width: 20%;
     filter: invert(100%);
     transform: rotate(-90deg);
+    
 `;
 const Buttonimge = styled.img`
     width: 100%;
