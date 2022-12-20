@@ -78,43 +78,91 @@ export default function NavBar() {
   )
 }
 const NavContainer=styled.section`
-border-right:2px solid #F1F1F3;
-height: 100vh;
-width:17%
+border-right:2px solid #D3D3D3;
+
+width:20%;
+
 
 
 `;
 
 const NavLogo=styled(Link)`
-margin-top: 30px;
+margin: 60px 0;
 display:block
 
 `;
 const  Logo=styled.img`
 display:block;
 
+
+
 `;
 
 
 const NavContent=styled.ul`
+padding: 0px;
+
 
 `;
 const NaveItems=styled.li`
 list-style: none;
+display:flex;
+align-items:center;
+margin-bottom:40px;
+justify-content:space-between;
+margin-right:40px;  
+
+
+
 `;
 const NavLinks=styled(Link)`
 text-decoration: none;
-font-size: 20px;
+font-size: 18px;
 color:#5A5A5A;
-`;
-const NavImage=styled.div``;
-const Img=styled.img``;
+font-family:"Poppins-SemiBold";
+&:hover {
+    color:#333988;
+}
 
-const NavBottom=styled.div``;
-const NavBottomImage=styled.div``;
+
+
+`;
+const NavImage=styled(Link)`
+
+&:hover {
+   
+
+    // background-color: ;
+    border-radius:50%                                                                        /
+    border:1px solid #D3D3D3; 
+    background-color: #D3D3D3;
+    transform: scale(1.5);
+  
+ }
+ 
+display: block;
+`;
+const Img=styled.img`
+display: block;
+width:100%;
+
+
+`;
+
+const NavBottom=styled.div`
+   height: 30%;
+   width: 80%
+`;
+const NavBottomImage=styled.div`
+padding: 30px;
+`;
 const BottomImg=styled.img``;
-const Content=styled.div``;
-const GoBtn=styled(Link)``;
+const Content=styled.div`
+padding: 30px;
+`;
+const GoBtn=styled(Link)`
+padding: 30px;
+`;
 // const BtnImg=styled.span``;
 const BtnImg=styled.img``;
 

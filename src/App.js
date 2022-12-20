@@ -43,6 +43,7 @@ backGround:#fff;
 margin: 0 auto;
 display:flex;
 justify-content:space-between;
+font-family: 'Poppins-Regular';
 
 
 `
