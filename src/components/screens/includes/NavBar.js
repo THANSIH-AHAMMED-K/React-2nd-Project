@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link} from 'react-router-dom'
+import { Link, NavLink} from 'react-router-dom'
 import styled from 'styled-components'
 
 export default function NavBar() {
@@ -13,37 +13,37 @@ export default function NavBar() {
        
         <NavContent >
             <NaveItems>
-                <NavLink  className={({isActive})=>isActive ? "active" : ""} to="/">Summary</NavLink>
+                <NavItem  className={({isActive})=>isActive ? "active" : ""} to="/">Summary</NavItem>
                 <NavImage to="/">
                     <Img src={require("../../../assets/Book.svg").default}/>
                 </NavImage>
             </NaveItems>
             <NaveItems>
-                <NavLink  className={({isActive})=>isActive ? "active" : ""} to="/products">Products</NavLink>
+                <NavItem  className={({isActive})=>isActive ? "active" : ""} to="/products">Products</NavItem>
                 <NavImage to="products">
                     <Img src={require("../../../assets/slide.svg").default}/>
                 </NavImage>
             </NaveItems>
             <NaveItems>
-                <NavLink className={({isActive})=>isActive ? "active" : ""} to="/hotselling">Hot Selling</NavLink>
+                <NavItem className={({isActive})=>isActive ? "active" : ""} to="/hotselling">Hot Selling</NavItem>
                 <NavImage to="hotselling">
                     <Img src={require("../../../assets/fire.svg").default}/>
                 </NavImage>
             </NaveItems>
             <NaveItems>
-                <NavLink className={({isActive})=>isActive ? "active" : ""} to="/manageorder">Manage Order</NavLink>
+                <NavItem className={({isActive})=>isActive ? "active" : ""} to="/manageorder">Manage Order</NavItem>
                 <NavImage to="manageorder">
                     <Img src={require("../../../assets/oder.svg").default}/>
                 </NavImage>
             </NaveItems>
             <NaveItems>
-                <NavLink  className={({isActive})=>isActive ? "active" : ""} to="/payments">Payments</NavLink>
+                <NavItem  className={({isActive})=>isActive ? "active" : ""} to="/payments">Payments</NavItem>
                 <NavImage to="payments">
                     <Img src={require("../../../assets/Wallet.svg").default}/>
                 </NavImage>
             </NaveItems>
             <NaveItems>
-                <NavLink  className={({isActive})=>isActive ? "active" : ""} to="/settings">Settings</NavLink>
+                <NavItem  className={({isActive})=>isActive ? "active" : ""} to="/settings">Settings</NavItem>
                 <NavImage  to="settings">
                     <Img src={require("../../../assets/Settings.svg").default} />
                 </NavImage>
@@ -92,7 +92,7 @@ const NaveItems=styled.li`
     justify-content:space-between;
     margin-right:40px;  
 `;
-const NavLink=styled(Link)`
+const NavItem=styled(NavLink)`
     text-decoration: none;
     font-size: 18px;
     color:#5A5A5A;
@@ -104,12 +104,14 @@ const NavLink=styled(Link)`
             color: #333988;
         }
 `;
-const NavImage=styled(Link)`   
+const NavImage=styled(NavLink)`   
     display: block;
     &:hover {      
       
        filter: invert(8%) sepia(33%) saturate(6876%) hue-rotate(235deg) brightness(90%) contrast(124%);
-   }
+   }&.active{
+    filter: invert(8%) sepia(33%) saturate(6876%) hue-rotate(235deg) brightness(90%) contrast(124%);
+}
 `;
 const Img=styled.img`
     display: block;

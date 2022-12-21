@@ -30,15 +30,27 @@ export default function Summary() {
           <DeliveryContainer>
             <DeliveryFirstContainer>
               <DeliveryIcon>
-                <DeliveryIconImg src={require("../../assets/Group 49.svg")} />
+                <DeliveryIconImg
+                  src={require("../../assets/Group 49.svg").default}
+                />
               </DeliveryIcon>
-              <DeliveryContent>Awaiting Delivery 150k Orders</DeliveryContent>
+              <DeliveryContent>
+                <MainContent> Awaiting Delivery</MainContent>
+
+                <SubContent>150k Orders</SubContent>
+              </DeliveryContent>
             </DeliveryFirstContainer>
             <DeliverySecondContainer>
               <DeliveryIcon>
-                <DeliveryIconImg src={require("../../assets/Group 49.svg")} />
+                <DeliveryIconImg
+                  src={require("../../assets/Group 49.svg").default}
+                />
               </DeliveryIcon>
-              <DeliveryContent>Awaiting Delivery 150k Orders</DeliveryContent>
+              <DeliveryContent>
+                <MainContent> Awaiting Delivery</MainContent>
+
+                <SubContent>150k Orders</SubContent>
+              </DeliveryContent>
             </DeliverySecondContainer>
           </DeliveryContainer>
           <SalesContainer>
@@ -47,6 +59,20 @@ export default function Summary() {
             </SalesImageContainer>
           </SalesContainer>
         </StatisticsMainContainer>
+        <StatisticsBottomContainer>
+          <BottomLeftContainer>
+            <LeftContainerContent></LeftContainerContent>
+            <LeftImageContainer>
+              <LeftContainerImageImg  src={require("../../assets/businessman-svgrepo-com8u76 5(1)2.svg").default} />
+            </LeftImageContainer>
+          </BottomLeftContainer>
+          <BottomRightContainer>
+            <RightContainerContent></RightContainerContent>
+            <RightImageContainer>
+              <RightContainerImageImg  src={require("../../assets/businessman-svgrepo-com(2)2.svg").default}/>
+            </RightImageContainer>
+          </BottomRightContainer>
+        </StatisticsBottomContainer>
       </SummaryContainer>
     </>
   );
@@ -120,36 +146,58 @@ const StatisticsMainContainer = styled.div`
   margin: 0 auto;
 `;
 const DeliveryContainer = styled.div`
-  width:47%;
+  width: 47%;
   display: flex;
-  flex-direction:column;
-  justify-content:space-between;
-
+  flex-direction: column;
+  justify-content: space-between;
 `;
 const DeliveryFirstContainer = styled.div`
-  height:47%;
-  background-color:#F4E7E4;
-  border-radius:20px;
-  
+  height: 47%;
+  background-color: #f4e7e4;
+  border-radius: 20px;
 `;
-const DeliveryIcon = styled.span``;
-const DeliveryIconImg = styled.img``;
-const DeliveryContent=styled.p``;
+const DeliveryIcon = styled.span`
+  display: block;
+  width: 52px;
+  padding: 40px 0 0px 30px;
+`;
+const DeliveryIconImg = styled.img`
+  display: block;
+  width: 100%;
+`;
+const DeliveryContent = styled.div`
+  font-family: "Poppins-Regular";
+  margin-top: -20px;
+  margin-left: 25px;
+`;
+const MainContent = styled.h4`
+  font-size: 20px;
+`;
+const SubContent = styled.h2`
+  font-size: 26px;
+  margin-top: -25px;
+`;
 const DeliverySecondContainer = styled.div`
-  height:47%;
-  border-radius:20px;
-  background-color:#E6F4FF;
+  height: 47%;
+  border-radius: 20px;
+  background-color: #e6f4ff;
 `;
 const SalesContainer = styled.div`
-  width: 47%
+  width: 47%;
 `;
-const SalesImageContainer = styled.div`
-`;
+const SalesImageContainer = styled.div``;
 const SalesImage = styled.img`
   display: block;
   width: 100%;
-  border-radius:20px; 
-
-  
+  border-radius: 20px;
 `;
+const StatisticsBottomContainer=styled.div``;
+const BottomLeftContainer=styled.div``;
+const LeftContainerContent=styled.h3``;
+const LeftImageContainer=styled.div``;
+const LeftContainerImageImg=styled.img``;
+const BottomRightContainer=styled.div``;
+const RightContainerContent=styled.div``;
+const RightImageContainer=styled.div``;
+const RightContainerImageImg=styled.img``;
 
