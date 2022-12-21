@@ -100,6 +100,9 @@ const NavLink=styled(Link)`
         &:hover {
             color:#333988;
         }
+        &.active{
+            color: #333988;
+        }
 `;
 const NavImage=styled(Link)`   
     display: block;

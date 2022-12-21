@@ -37,8 +37,8 @@ function App() {
 export default App;
 
 const MainContainer=styled.div`
-// padding:40px 0px;
-max-width:90%; 
+padding: 0px 0 0 80px;
+
 backGround:#fff;
 margin: 0 auto;
 display:flex;
