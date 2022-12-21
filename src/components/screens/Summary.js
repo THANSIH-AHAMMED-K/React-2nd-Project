@@ -1,7 +1,19 @@
-import React from 'react'
+import React from "react";
+import styled from "styled-components";
 
 export default function Summary() {
   return (
-    <h1>Summary</h1>
-  )
+    <>
+      <SummaryContainer>
+        <SearchBar>
+          <SearchBarContainer>
+            <SearchBarContent>Search here</SearchBarContent>
+            <SearchBarIcon>
+              <SearchIcon src={require("../../../assets/search.svg").default} />
+            </SearchBarIcon>
+          </SearchBarContainer>
+        </SearchBar>
+      </SummaryContainer>
+    </>
+  );
 }
