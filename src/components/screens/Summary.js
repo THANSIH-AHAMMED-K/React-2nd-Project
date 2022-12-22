@@ -61,15 +61,24 @@ export default function Summary() {
         </StatisticsMainContainer>
         <StatisticsBottomContainer>
           <BottomLeftContainer>
-            <LeftContainerContent></LeftContainerContent>
+            <LeftContainerContent>
+              Create Ads for Your Business
+            </LeftContainerContent>
             <LeftImageContainer>
-              <LeftContainerImageImg  src={require("../../assets/businessman-svgrepo-com8u76 5(1)2.svg").default} />
+              <LeftContainerImageImg
+                src={require("../../assets/Group 52.svg").default}
+              />
             </LeftImageContainer>
           </BottomLeftContainer>
           <BottomRightContainer>
-            <RightContainerContent></RightContainerContent>
+            <RightContainerContent>Secure Your Payments</RightContainerContent>
             <RightImageContainer>
-              <RightContainerImageImg  src={require("../../assets/businessman-svgrepo-com(2)2.svg").default}/>
+              <RightContainerImageImg
+                src={
+                  require("../../assets/businessman-svgrepo-com (2) 2.svg")
+                    .default
+                }
+              />
             </RightImageContainer>
           </BottomRightContainer>
         </StatisticsBottomContainer>
@@ -191,13 +200,48 @@ const SalesImage = styled.img`
   width: 100%;
   border-radius: 20px;
 `;
-const StatisticsBottomContainer=styled.div``;
-const BottomLeftContainer=styled.div``;
-const LeftContainerContent=styled.h3``;
-const LeftImageContainer=styled.div``;
-const LeftContainerImageImg=styled.img``;
-const BottomRightContainer=styled.div``;
-const RightContainerContent=styled.div``;
-const RightImageContainer=styled.div``;
-const RightContainerImageImg=styled.img``;
-
+const StatisticsBottomContainer = styled.div`
+  padding: 40px 0;
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+`;
+const BottomLeftContainer = styled.div`
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+`;
+const LeftContainerContent = styled.h3`
+  max-width: 200px;
+  line-height: 30px;
+  font-size: 20px;
+  font-family: "Poppins-Regular";
+`;
+const LeftImageContainer = styled.div`
+  width: 100px;
+  margin: 40px 0 0 40px;
+`;
+const LeftContainerImageImg = styled.img`
+  display: block;
+  width: 100%;
+`;
+const BottomRightContainer = styled.div`
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+`;
+const RightContainerContent = styled.h1`
+  max-width: 200px;
+  font-size: 20px;
+  font-family: "Poppins-Regular";
+`;
+const RightImageContainer = styled.div`
+  width: 100px;
+`;
+const RightContainerImageImg = styled.img`
+  display: block;
+  width: 100%;
+`;

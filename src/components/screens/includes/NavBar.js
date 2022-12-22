@@ -109,7 +109,8 @@ const NavImage=styled(NavLink)`
     &:hover {      
       
        filter: invert(8%) sepia(33%) saturate(6876%) hue-rotate(235deg) brightness(90%) contrast(124%);
-   }&.active{
+   }
+   &.active{
     filter: invert(8%) sepia(33%) saturate(6876%) hue-rotate(235deg) brightness(90%) contrast(124%);
 }
 `;
