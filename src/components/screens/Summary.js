@@ -239,7 +239,7 @@ const RightContainerContent = styled.h1`
   font-family: "Poppins-Regular";
 `;
 const RightImageContainer = styled.div`
-  width: 100px;
+  width: 120px;
 `;
 const RightContainerImageImg = styled.img`
   display: block;
