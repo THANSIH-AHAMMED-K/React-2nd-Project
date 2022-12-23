@@ -11,7 +11,7 @@ export default function RightBar() {
     <>
     <Helmet>
                 
-                <title>rightBar</title>
+                <title>RightBar</title>
               
             </Helmet>
       <RightBarCointainer>

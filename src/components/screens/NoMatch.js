@@ -8,7 +8,7 @@ export default function NoMatch() {
     <>
     <Helmet>
                 
-                <title>pagenotfound</title>
+                <title>PageNotFound</title>
               
             </Helmet>
 

@@ -7,7 +7,7 @@ export default function ManageOrder() {
     <>
     <Helmet>
                 
-                <title>manageorder</title>
+                <title>ManageOrder</title>
               
             </Helmet>
       <ProductsContainer>

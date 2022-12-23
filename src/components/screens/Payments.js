@@ -7,7 +7,7 @@ export default function Payments() {
     <>
      <Helmet>
                 
-                <title>payments</title>
+                <title>Payments</title>
               
             </Helmet>
     <ProductsContainer>

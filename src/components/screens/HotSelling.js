@@ -7,7 +7,7 @@ export default function HotSelling() {
     <>
         <Helmet>
                 
-                <title>hotselling</title>
+                <title>HottSelling</title>
               
             </Helmet>
     

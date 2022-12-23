@@ -6,7 +6,7 @@ export default function Products() {
     <>
        <Helmet>
                 
-                <title>products</title>
+                <title>Products</title>
               
             </Helmet>
 

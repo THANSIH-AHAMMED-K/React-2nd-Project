@@ -6,7 +6,7 @@ export default function Settings() {
   return (
     <>
       <Helmet>
-        <title>settings</title>
+        <title>Settings</title>
       </Helmet>
       <ProductsContainer>
         <Heading>Settings</Heading>
