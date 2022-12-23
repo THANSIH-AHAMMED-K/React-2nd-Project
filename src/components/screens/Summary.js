@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-
+import { Link } from "react-router-dom";
 export default function Summary() {
   return (
     <>
@@ -107,7 +107,7 @@ const SearchBarContent = styled.h3`
   color: #5a5a5a;
   font-family: "Poppins-Regular";
 `;
-const SearchBarIcon = styled.span`
+const SearchBarIcon = styled(Link)`
   display: block; ;
 `;
 const SearchIcon = styled.img`
@@ -164,6 +164,11 @@ const DeliveryFirstContainer = styled.div`
   height: 47%;
   background-color: #f4e7e4;
   border-radius: 20px;
+  &:hover{
+    box-shadow: 0px 0px 10px 1px grey;
+  cursor: pointer;
+
+  }
 `;
 const DeliveryIcon = styled.span`
   display: block;
@@ -190,15 +195,24 @@ const DeliverySecondContainer = styled.div`
   height: 47%;
   border-radius: 20px;
   background-color: #e6f4ff;
+  &:hover{
+    box-shadow: 0px 0px 10px 1px grey;
+  cursor: pointer;
 `;
 const SalesContainer = styled.div`
   width: 47%;
+
 `;
-const SalesImageContainer = styled.div``;
+const SalesImageContainer = styled.div`
+
+`;
 const SalesImage = styled.img`
   display: block;
   width: 100%;
   border-radius: 20px;
+  &:hover{
+    box-shadow: 0px 0px 10px 1px grey;
+  cursor: pointer;
 `;
 const StatisticsBottomContainer = styled.div`
   padding: 40px 0;

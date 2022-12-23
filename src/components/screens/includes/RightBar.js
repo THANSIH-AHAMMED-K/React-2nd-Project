@@ -58,13 +58,13 @@ export default function RightBar() {
             <ProductItem>
               <ProductContent>
                 <ProductImageContainer>
-                  <ProductImage src={wooden} />
+                  <ProductImage src={require("../../../assets/The Top 20 BEST Gifts For RV Enthusiasts - Living Bite Sized 1.jpg")} />
                 </ProductImageContainer>
                 <ProductTitle>
                   <ProductTitleText>
-                    Dominoes Coffee Table Game
+                    Photive Wirless Speakers
                   </ProductTitleText>
-                  <ProductSalesText>50k Sales</ProductSalesText>
+                  <ProductSalesText>42k Sales</ProductSalesText>
                 </ProductTitle>
               </ProductContent>
               <ProductPrice>
@@ -74,13 +74,13 @@ export default function RightBar() {
             <ProductItem>
               <ProductContent>
                 <ProductImageContainer>
-                  <ProductImage src={wooden} />
+                  <ProductImage src={require("../../../assets/Tot 55_ Korting Urbanears Multiroom Speakers Baggen, Stammen Of Lotsen Voor Vanaf €89,95 Bij IBOOD - DealsTracker_nl 1.jpg")} />
                 </ProductImageContainer>
                 <ProductTitle>
                   <ProductTitleText>
-                    Dominoes Coffee Table Game
+                    Platttan 2 HeadPhones
                   </ProductTitleText>
-                  <ProductSalesText>50k Sales</ProductSalesText>
+                  <ProductSalesText>38k Sales</ProductSalesText>
                 </ProductTitle>
               </ProductContent>
               <ProductPrice>
@@ -90,13 +90,13 @@ export default function RightBar() {
             <ProductItem>
               <ProductContent>
                 <ProductImageContainer>
-                  <ProductImage src={wooden} />
+                  <ProductImage src={require("../../../assets/Aeo URBANEARS Plattan 2 Headphones 1.jpg")} />
                 </ProductImageContainer>
                 <ProductTitle>
                   <ProductTitleText>
-                    Dominoes Coffee Table Game
+                    Solar Hand Crank Radio
                   </ProductTitleText>
-                  <ProductSalesText>50k Sales</ProductSalesText>
+                  <ProductSalesText>36k Sales</ProductSalesText>
                 </ProductTitle>
               </ProductContent>
               <ProductPrice>
@@ -106,13 +106,13 @@ export default function RightBar() {
             <ProductItem>
               <ProductContent>
                 <ProductImageContainer>
-                  <ProductImage src={wooden} />
+                  <ProductImage src={require("../../../assets/Emergency Solar Hand Crank Radio @ Sharper Image 2.jpg")} />
                 </ProductImageContainer>
                 <ProductTitle>
                   <ProductTitleText>
                     Dominoes Coffee Table Game
                   </ProductTitleText>
-                  <ProductSalesText>50k Sales</ProductSalesText>
+                  <ProductSalesText>30k Sales</ProductSalesText>
                 </ProductTitle>
               </ProductContent>
               <ProductPrice>
@@ -229,13 +229,14 @@ const ProductItem = styled.li`
   justify-content: space-between;
   align-items: center;
   margin-bottom: 40px;
+
 `;
 const ProductContent = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
 `;
-const ProductImageContainer = styled.div`
+const ProductImageContainer = styled(Link)`
   width: 85px;
   margin-right: 25px;
 `;
@@ -252,7 +253,7 @@ const ProductTitleText = styled.h4`
 const ProductSalesText = styled.small`
   font-family: "Poppins-Regular";
 `;
-const ProductPrice = styled.span`
+const ProductPrice = styled(Link)`
   display: block;
   margin-top: -15px;
 `;
@@ -267,7 +268,7 @@ const ProductBottom = styled.div`
   margin: 0 auto;
 `;
 const LeftContainer = styled.div`
-  width: 42%;
+  width: 47%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -283,6 +284,10 @@ const Chat = styled(Link)`
   list-style: none;
   text-decoration: none;
   align-items: center;
+  &:hover{
+    // transition: 2s;
+    transform:translateX(6px);
+  }
   
 `;
 const ChatText = styled.h4`

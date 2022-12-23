@@ -152,11 +152,16 @@ const ButtonContainer = styled.button`
     border: none;
     margin: 0 auto;
     cursor: pointer;
+    &:hover{
+        // transition: 2s;
+        transform:translateX(6px);
+      }
 `;
 const SideHeading = styled.p`
     margin-right: 5px;
     color: #fff;
     font-weight: bold;
+   
 `;
 const ImageContainer = styled.div`
     width: 20%;
