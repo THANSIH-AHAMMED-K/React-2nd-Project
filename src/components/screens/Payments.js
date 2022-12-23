@@ -1,14 +1,22 @@
 import React from 'react'
 import styled from 'styled-components';
+import { Helmet } from 'react-helmet';
 
 export default function Payments() {
   return (
+    <>
+     <Helmet>
+                
+                <title>payments</title>
+              
+            </Helmet>
     <ProductsContainer>
       
     <Heading>Payments</Heading> 
     <SubHeading>Coming Soon...!</SubHeading>
     
     </ProductsContainer>
+    </>
 )
 }
 const ProductsContainer=styled.div`

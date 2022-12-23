@@ -11,6 +11,7 @@ import ManageOrder from './components/screens/ManageOrder';
 import Payments from './components/screens/Payments';
 import Settings from './components/screens/Settings';
 import styled from 'styled-components';
+import NoMatch from './components/screens/NoMatch';
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
             <Route  path='Manageorder' element={<ManageOrder/>}/>
             <Route  path='payments' element={<Payments/>}/>
             <Route  path='settings' element={<Settings/>}/>
+            <Route path='*' element={<NoMatch/>}/>
           </Routes>
           <RightBar/>
         </Router>
@@ -37,9 +39,9 @@ function App() {
 export default App;
 
 const MainContainer=styled.div`
-padding: 0px 0 0 80px;
+position: relative;
 
-backGround:#fff;
+
 margin: 0 auto;
 display:flex;
 justify-content:space-between;

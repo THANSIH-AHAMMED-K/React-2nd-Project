@@ -1,9 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 export default function Summary() {
   return (
     <>
+      <Helmet>
+        <title>summary</title>
+      </Helmet>
+
       <SummaryContainer>
         <SearchBar>
           <SearchBarContainer>
@@ -89,13 +94,20 @@ export default function Summary() {
 
 const SummaryContainer = styled.div`
   padding: 40px 0;
+  
   width: 49%;
+  @media (max-width: 1200px) {
+    width: 69%;
+    padding-top: 140px;
+
+       }
 `;
 const SearchBar = styled.div`
   width: 80%;
   margin: 0 auto;
   background-color: #f1f1f3;
   border-radius: 15px;
+  padding: 20px 10px;
 `;
 const SearchBarContainer = styled.div`
   display: flex;
@@ -164,16 +176,16 @@ const DeliveryFirstContainer = styled.div`
   height: 47%;
   background-color: #f4e7e4;
   border-radius: 20px;
-  &:hover{
-    box-shadow: 0px 0px 10px 1px grey;
-  cursor: pointer;
+  padding: 25px;
 
+  &:hover {
+    box-shadow: 0px 0px 10px 1px grey;
+    cursor: pointer;
   }
 `;
 const DeliveryIcon = styled.span`
   display: block;
-  width: 52px;
-  padding: 40px 0 0px 30px;
+  width: 55px;
 `;
 const DeliveryIconImg = styled.img`
   display: block;
@@ -181,17 +193,15 @@ const DeliveryIconImg = styled.img`
 `;
 const DeliveryContent = styled.div`
   font-family: "Poppins-Regular";
-  margin-top: -20px;
-  margin-left: 25px;
 `;
 const MainContent = styled.h4`
   font-size: 20px;
 `;
 const SubContent = styled.h2`
   font-size: 26px;
-  margin-top: -25px;
 `;
 const DeliverySecondContainer = styled.div`
+  padding: 25px;
   height: 47%;
   border-radius: 20px;
   background-color: #e6f4ff;
@@ -201,11 +211,8 @@ const DeliverySecondContainer = styled.div`
 `;
 const SalesContainer = styled.div`
   width: 47%;
-
 `;
-const SalesImageContainer = styled.div`
-
-`;
+const SalesImageContainer = styled.div``;
 const SalesImage = styled.img`
   display: block;
   width: 100%;

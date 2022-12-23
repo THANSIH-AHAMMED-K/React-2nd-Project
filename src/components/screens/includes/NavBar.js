@@ -1,179 +1,296 @@
-import React from 'react'
-import { Link, NavLink} from 'react-router-dom'
-import styled from 'styled-components'
+import React, { useState } from "react";
+import { Link, NavLink } from "react-router-dom";
+import profile from "../../../assets/Group 38.jpg";
+import styled from "styled-components";
+import { Helmet } from "react-helmet";
+import { IconBase } from "react-icons";
 
 export default function NavBar() {
+  const [navClose, setNavClose] = useState(false);
+  //   onClick={() => setNavClose(!navClose)}
   return (
     <>
-    <NavContainer>
-     
-        <NavLogo>
+      <Helmet>
+        <title>navbar</title>
+      </Helmet>
+      <Wrapper>
+        <Header>
+          <Menu onClick={() => setNavClose(!navClose)}>
+            <MenuIcon src={require("../../../assets/menu.svg").default} />
+          </Menu>
+          <NavLogo>
             <Logo src={require("../../../assets/logo.svg").default} />
-        </NavLogo>
-       
-        <NavContent >
-            <NaveItems>
-                <NavItem  className={({isActive})=>isActive ? "active" : ""} to="/">Summary</NavItem>
+          </NavLogo>
+          <NavContainer className={navClose ? "navclose" : ""}>
+          <Menu onClick={() => setNavClose(!navClose)}>
+            <MenuIcon src={require("../../../assets/Cross.svg").default} />
+          </Menu>
+            <NavContent>
+              <NaveItems>
+                <NavItem
+                  className={({ isActive }) => (isActive ? "active" : "")}
+                  to="/"
+                >
+                  Summary
+                </NavItem>
                 <NavImage to="/">
-                    <Img src={require("../../../assets/Book.svg").default}/>
+                  <Img src={require("../../../assets/Book.svg").default} />
                 </NavImage>
-            </NaveItems>
-            <NaveItems>
-                <NavItem  className={({isActive})=>isActive ? "active" : ""} to="/products">Products</NavItem>
+              </NaveItems>
+              <NaveItems>
+                <NavItem
+                  className={({ isActive }) => (isActive ? "active" : "")}
+                  to="/products"
+                >
+                  Products
+                </NavItem>
                 <NavImage to="products">
-                    <Img src={require("../../../assets/slide.svg").default}/>
+                  <Img src={require("../../../assets/slide.svg").default} />
                 </NavImage>
-            </NaveItems>
-            <NaveItems>
-                <NavItem className={({isActive})=>isActive ? "active" : ""} to="/hotselling">Hot Selling</NavItem>
+              </NaveItems>
+              <NaveItems>
+                <NavItem
+                  className={({ isActive }) => (isActive ? "active" : "")}
+                  to="/hotselling"
+                >
+                  Hot Selling
+                </NavItem>
                 <NavImage to="hotselling">
-                    <Img src={require("../../../assets/fire.svg").default}/>
+                  <Img src={require("../../../assets/fire.svg").default} />
                 </NavImage>
-            </NaveItems>
-            <NaveItems>
-                <NavItem className={({isActive})=>isActive ? "active" : ""} to="/manageorder">Manage Order</NavItem>
+              </NaveItems>
+              <NaveItems>
+                <NavItem
+                  className={({ isActive }) => (isActive ? "active" : "")}
+                  to="/manageorder"
+                >
+                  Manage Order
+                </NavItem>
                 <NavImage to="manageorder">
-                    <Img src={require("../../../assets/oder.svg").default}/>
+                  <Img src={require("../../../assets/oder.svg").default} />
                 </NavImage>
-            </NaveItems>
-            <NaveItems>
-                <NavItem  className={({isActive})=>isActive ? "active" : ""} to="/payments">Payments</NavItem>
+              </NaveItems>
+              <NaveItems>
+                <NavItem
+                  className={({ isActive }) => (isActive ? "active" : "")}
+                  to="/payments"
+                >
+                  Payments
+                </NavItem>
                 <NavImage to="payments">
-                    <Img src={require("../../../assets/Wallet.svg").default}/>
+                  <Img src={require("../../../assets/Wallet.svg").default} />
                 </NavImage>
-            </NaveItems>
-            <NaveItems>
-                <NavItem  className={({isActive})=>isActive ? "active" : ""} to="/settings">Settings</NavItem>
-                <NavImage  to="settings">
-                    <Img src={require("../../../assets/Settings.svg").default} />
+              </NaveItems>
+              <NaveItems>
+                <NavItem
+                  className={({ isActive }) => (isActive ? "active" : "")}
+                  to="/settings"
+                >
+                  Settings
+                </NavItem>
+                <NavImage to="settings">
+                  <Img src={require("../../../assets/Settings.svg").default} />
                 </NavImage>
-            </NaveItems>
-        </NavContent>
-        <NavBottom>
-                <NavBottomItems>
-                    <NavBottomImage>
-                        <BottomImg src={require("../../../assets/Group 11.svg").default}/>            
-                    </NavBottomImage>
-                    <Content>
-                        Power up your Business
-                    </Content> 
-            
-                    <ButtonContainer>
-                        <SideHeading>Go Pro!</SideHeading>
-                        <ImageContainer>
-                            <Buttonimge src={require("../../../assets/Settings-1.svg").default}/>
-                        </ImageContainer>
-                    </ButtonContainer>
-                </NavBottomItems>
-        </NavBottom>
-    </NavContainer>
+              </NaveItems>
+            </NavContent>
+            <NavBottom>
+              <NavBottomItems>
+                <NavBottomImage>
+                  <BottomImg
+                    src={require("../../../assets/Group 11.svg").default}
+                  />
+                </NavBottomImage>
+                <Content>Power up your Business</Content>
+
+                <ButtonContainer>
+                  <SideHeading>Go Pro!</SideHeading>
+                  <ImageContainer>
+                    <Buttonimge
+                      src={require("../../../assets/Settings-1.svg").default}
+                    />
+                  </ImageContainer>
+                </ButtonContainer>
+              </NavBottomItems>
+            </NavBottom>
+          </NavContainer>
+          <ProfileIcon>
+              <ProfileIconImage src={profile} />
+            </ProfileIcon>
+        </Header>
+      </Wrapper>
     </>
-  )
+  );
 }
-const NavContainer=styled.section`
-    border-right:2px solid #D3D3D3;
-    width:20%;
+
+const Wrapper = styled.section`
+  @media (max-width: 1200px) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-bottom: 1px solid #d3d3d3;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 0px 10px 0px;
+    width: 100%;
+  }
+  width: 20%;
+  border-right: 2px solid #d3d3d3;
 `;
-const NavLogo=styled(Link)`
-    margin: 60px 0;
-    display:block;
-`;
-const  Logo=styled.img`
-    display:block;
-`;
-const NavContent=styled.ul`
-    padding: 40px 0px;
-`;
-const NaveItems=styled.li`
-    list-style: none;
-    display:flex;
-    align-items:center;
-    margin-bottom:40px;
-    justify-content:space-between;
-    margin-right:40px;  
-`;
-const NavItem=styled(NavLink)`
-    text-decoration: none;
-    font-size: 18px;
-    color:#5A5A5A;
-    font-family:"Poppins-SemiBold";
-        &:hover {
-            color:#333988;
-        }
-        &.active{
-            color: #333988;
-        }
-`;
-const NavImage=styled(NavLink)`   
+const Menu = styled.div``;
+const MenuIcon = styled.img`
+  width: 25px;
+  height: 25px;
+  display: none;
+  @media (max-width: 1200px) {
     display: block;
-    &:hover {      
-      
-       filter: invert(8%) sepia(33%) saturate(6876%) hue-rotate(235deg) brightness(90%) contrast(124%);
-   }
-   &.active{
-    filter: invert(8%) sepia(33%) saturate(6876%) hue-rotate(235deg) brightness(90%) contrast(124%);
-}
+  }
 `;
-const Img=styled.img`
-    display: block;
-    width:100%;
+const Header = styled.header`
+  position: relative;
+
+  display: flex;
+  padding: 40px;
+  flex-direction: column;
+
+  background: #fff;
+  @media (max-width: 1200px) {
+    width: 100%;
+    padding: 0 40px;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+  }
 `;
-const NavBottom=styled.div`
-    margin-top:90px;
-    background-color:#E6F4FF;
+const NavContainer = styled.section`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  padding-top: 30px;
+  transition: 200ms ease-in-out;
+  background: #fff;
+  transform: translateX(0);
+  @media (max-width: 1200px) {
     padding: 40px;
-    width: 55%;
-    border-radius:20px ;
-    margin-bottom:30px;
+    transform: translateX(-100%);
+    position: fixed;
+    z-index: 3;
+    overflow-y: auto;
+    top: 0;
+    left: 0;
+  }
+  &.navclose {
+    transform: translateX(0);
+  }
 `;
-const NavBottomItems=styled.div`
-    width: 90%;
-    margin:0 auto;
+const NavLogo = styled(Link)`
+  @media (max-width: 1200px) {
+    margin: 30px 0px;
+  }
+  margin-top: 15px;
+  display: block;
+  z-index: 3;
 `;
-const NavBottomImage=styled.div`
+const Logo = styled.img`
+  display: block;
 `;
-const BottomImg=styled.img`
-    display: block;
-    width:100%;
+const NavContent = styled.ul`
+  padding: 40px 0px;
 `;
-const Content=styled.div`
-    text-align:center; 
-    font-family:"Poppins-Bold";
-    font-size:18px;
-    margin-bottom: 30px;
+const NaveItems = styled.li`
+  list-style: none;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  margin-bottom: 40px;
+  justify-content: space-between;
+`;
+const NavItem = styled(NavLink)`
+  text-decoration: none;
+  font-size: 18px;
+  color: #5a5a5a;
+  font-family: "Poppins-SemiBold";
+  &:hover {
+    color: #333988;
+  }
+  &.active {
+    color: #333988;
+  }
+`;
+const NavImage = styled(NavLink)`
+  display: block;
+  &:hover {
+    filter: invert(8%) sepia(33%) saturate(6876%) hue-rotate(235deg)
+      brightness(90%) contrast(124%);
+  }
+  &.active {
+    filter: invert(8%) sepia(33%) saturate(6876%) hue-rotate(235deg)
+      brightness(90%) contrast(124%);
+  }
+`;
+const Img = styled.img`
+  display: block;
+  width: 100%;
+`;
+const NavBottom = styled.div`
+  background-color: #e6f4ff;
+  padding: 20px;
+  border-radius: 20px;
+`;
+const NavBottomItems = styled.div`
+  width: 90%;
+  margin: 0 auto;
+`;
+const NavBottomImage = styled.div`
+  padding: 20px;
+`;
+const BottomImg = styled.img`
+  display: block;
+  width: 100%;
+`;
+const Content = styled.div`
+  text-align: center;
+  font-family: "Poppins-Bold";
+  font-size: 18px;
+  margin-bottom: 30px;
 `;
 const ButtonContainer = styled.button`
-    margin-top: 30px;
-    display: flex;
-    align-items: center;
-    padding: 3px 40px;
-    background-color: #333988;
-    border-radius: 15px;
-    border: none;
-    margin: 0 auto;
-    cursor: pointer;
-    &:hover{
-        // transition: 2s;
-        transform:translateX(6px);
-      }
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #333988;
+  border-radius: 15px;
+  border: none;
+  margin: 0 auto;
+  cursor: pointer;
+  &:hover {
+    // transition: 2s;
+    transform: translateX(6px);
+  }
 `;
 const SideHeading = styled.p`
-    margin-right: 5px;
-    color: #fff;
-    font-weight: bold;
-   
+  margin-right: 5px;
+  color: #fff;
+  font-weight: bold;
 `;
 const ImageContainer = styled.div`
-    width: 20%;
-    filter: invert(100%);
-    transform: rotate(-90deg);
-    
+  width: 20%;
+  filter: invert(100%);
+  transform: rotate(-90deg);
 `;
 const Buttonimge = styled.img`
-    width: 100%;
-    display: block;
+  width: 100%;
+  display: block;
 `;
-
-
-
-
+const ProfileIcon = styled(Link)`
+  display: none;
+  width: 39px;
+  @media (max-width: 1200px) {
+    display: block;
+  }
+`;
+const ProfileIconImage = styled.img`
+  width: 100%;
+  display: block;
+  border-radius: 12px;
+`;

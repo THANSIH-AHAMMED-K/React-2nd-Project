@@ -1,14 +1,22 @@
 import React from 'react'
 import styled from 'styled-components'
-
+import { Helmet } from 'react-helmet';
 export default function Products() {
   return (
+    <>
+       <Helmet>
+                
+                <title>products</title>
+              
+            </Helmet>
+
     <ProductsContainer>
       
       <Heading>Products</Heading> 
       <SubHeading>Coming Soon...!</SubHeading>
       
       </ProductsContainer>
+      </>
   )
 }
 const ProductsContainer=styled.div`

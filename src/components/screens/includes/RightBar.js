@@ -4,10 +4,16 @@ import profile from "../../../assets/Group 38.jpg";
 // import arrow from "../../../assets/Settings-1.svg";
 import wooden from "../../../assets/Buy Bronx Wooden Dominoes from the Next UK online shop 1.jpg";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 export default function RightBar() {
   return (
     <>
+    <Helmet>
+                
+                <title>rightBar</title>
+              
+            </Helmet>
       <RightBarCointainer>
         <NotificationBar>
           <LeftSide>
@@ -151,7 +157,11 @@ export default function RightBar() {
 }
 const RightBarCointainer = styled.div`
   width: 30%;
-  background-color: #f1f1f3;
+  background-color: #f1f1f3;@media (max-width: 1200px) {
+    
+    padding-top: 110px;
+
+       }
 `;
 const NotificationBar = styled.div`
   width: 80%;
@@ -159,6 +169,10 @@ const NotificationBar = styled.div`
   padding: 40px 0;
   display: flex;
   justify-content: space-between;
+  @media (max-width: 1200px) {
+    justify-content: flex-end;
+
+  }
   align-items: center;
 `;
 const LeftSide = styled.div`
@@ -181,10 +195,14 @@ const MessageIconImage = styled.img`
 const RightSide = styled.div`
   display: flex;
   align-items: center;
+  @media (max-width: 1200px) {
+    display: none;
+  }
 `;
 
 const ProfileIcon = styled(Link)`
   width: 39px;
+  
 `;
 const ProfileIconImage = styled.img`
   width: 100%;
