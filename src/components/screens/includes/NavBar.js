@@ -239,6 +239,7 @@ const NavBottom = styled.div`
 const NavBottomItems = styled.div`
   width: 90%;
   margin: 0 auto;
+  padding: 0;
 `;
 const NavBottomImage = styled.div`
   padding: 20px;
